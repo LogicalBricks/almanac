@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Almanac::CommentsController do
+describe Almanac::CommentsController, type: :controller do
   before :each do
     @post = create(:post)
   end
@@ -15,7 +15,7 @@ describe Almanac::CommentsController do
 
       it "redirects to the post" do
         post :create, :use_route => :almanac, comment: attributes_for(:comment), :post_id => @post.id
-        response.should redirect_to @post
+        response.should redirect_to "/almanac/#{@post.slug}"
       end
     end
     context "with invalid attributes" do
@@ -27,7 +27,7 @@ describe Almanac::CommentsController do
 
       it "redirects to the post" do
         post :create, :use_route => :almanac, comment: attributes_for(:comment), :post_id => @post.id
-        response.should redirect_to @post
+        response.should redirect_to "/almanac/#{@post.slug}"
       end
     end
   end

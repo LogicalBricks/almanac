@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Almanac::BlogsController do
+describe Almanac::BlogsController, type: :controller do
   describe "POST create" do
     context "with valid attributes" do
       it "creates a new blog" do

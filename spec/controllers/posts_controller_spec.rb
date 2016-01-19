@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Almanac::PostsController do
+describe Almanac::PostsController, type: :controller do
   before :each do
     @blog = create(:blog)
   end
