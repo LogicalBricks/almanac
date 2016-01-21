@@ -73,8 +73,7 @@ Almanac.user_class = "User" # other possibilities: "Author", "Writer", etc.
 ## Kramdown
 [Kramdown](http://kramdown.rubyforge.org/index.html) is the superset of Markdown. All input fields can use it. Check out all [syntax rules](http://kramdown.rubyforge.org/syntax.html) for kramdown. One of the best examples of kramdown usage is code highlighting that is part of Almanac. In your post you can simply write:
 
-```
-~~~ruby
+```ruby
 def foo
   puts "bar"
 end
